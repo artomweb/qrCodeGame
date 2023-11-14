@@ -1,15 +1,17 @@
 let player;
 const SF = 100;
 let qrImg;
+let goal;
 
 function preload() {
-  qrImg = loadImage("chart500.png", success, failure);
+  qrImg = loadImage("chart500.png");
 }
 
 function setup() {
   let canvas = createCanvas(29 * SF, 29 * SF);
   canvas.parent("sketch");
-  player = new Player(SF, qrImg);
+  goal = createVector(3, 8);
+  player = new Player(SF, qrImg, goal);
   console.log(qrImg);
   //   rectMode(CENTER);
 }
@@ -17,7 +19,7 @@ function draw() {
   background("grey");
   image(qrImg, 0, 0, width, height);
   fill("green");
-  rect(0, 0, SF, SF);
+  rect(goal.x * SF, goal.y * SF, SF, SF);
   player.draw();
 }
 
@@ -29,12 +31,4 @@ function keyPressed() {
 
 function arrowButton(key) {
   player.move(key);
-}
-
-function success(img) {
-  console.log("sucess");
-}
-
-function failure(event) {
-  console.error("Oops!", event);
 }
