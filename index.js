@@ -23,6 +23,7 @@ function draw() {
 function keyPressed() {
   //   console.log(keyCode);
   player.move(keyCode);
+  return false;
 }
 
 function arrowButton(key) {
