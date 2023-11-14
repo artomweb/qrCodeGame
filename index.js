@@ -10,6 +10,7 @@ function setup() {
   let canvas = createCanvas(29 * SF, 29 * SF);
   canvas.parent("sketch");
   player = new Player(SF, qrImg);
+  console.log(qrImg);
   //   rectMode(CENTER);
 }
 function draw() {
