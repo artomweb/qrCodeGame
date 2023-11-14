@@ -3,7 +3,7 @@ const SF = 100;
 let qrImg;
 
 function preload() {
-  qrImg = loadImage("chart500.png");
+  qrImg = loadImage("chart500.png", success, failure);
 }
 
 function setup() {
@@ -28,4 +28,12 @@ function keyPressed() {
 
 function arrowButton(key) {
   player.move(key);
+}
+
+function success(img) {
+  console.log("sucess");
+}
+
+function failure(event) {
+  console.error("Oops!", event);
 }
