@@ -33,8 +33,8 @@ class Player {
     }
     console.log(" ");
 
-    let px = map(this.pos.x, 0, 28, 500 / 28 / 2, 500 - 500 / 28 / 2);
-    let py = map(this.pos.y, 0, 28, 500 / 28 / 2, 500 - 500 / 28 / 2);
+    let px = map(this.pos.x, 0, 28, this.img.width / 28 / 2, this.img.width - this.img.width / 28 / 2);
+    let py = map(this.pos.y, 0, 28, this.img.height / 28 / 2, this.img.height - this.img.height / 28 / 2);
 
     const pxCol = this.img.get(px, py);
 

@@ -1,5 +1,5 @@
 let player;
-const SF = 100;
+const SF = 10;
 let qrImg;
 let goal;
 
