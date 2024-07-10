@@ -1,6 +1,6 @@
 # A game which is played inside it's own QR code
 
-## Play it [HERE](https://artomweb.com/qrCodeGame)
+## Play it [HERE](https://qrgame.artomweb.com)
 
 <img src="screenshot.png" width="300">
 
